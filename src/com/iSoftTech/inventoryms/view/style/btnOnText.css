@@ -1,0 +1,29 @@
+
+.button{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 15px; 
+    -fx-padding: 0px;
+    -fx-background-image: url("../../../../../resources/image/close_red.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
+.button:hover{
+    -fx-background-color: none;
+    -fx-background-image: url("../../../../../resources/image/close.png");
+}
+.button:focused{
+    -fx-background-color: none;
+}
+.btnClose{
+    -fx-background-image: url("../../../../../resources/image/close_new.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-cursor: hand;
+}
+.root .table-view{
+    -fx-control-inner-background: #fff;
+    -fx-table-cell-border-color: transparent;
+}

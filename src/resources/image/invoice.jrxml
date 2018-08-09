@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="invoice" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="07938d4f-2683-4d2c-a2da-69d7810ddfcb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="sold_by" class="java.lang.String"/>
+	<parameter name="sell_id" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="quantity" class="java.lang.String"/>
+	<parameter name="total_price" class="java.lang.String"/>
+	<parameter name="sales_price" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="82" y="0" width="372" height="40" uuid="8f1d2e47-e0bb-4b06-b907-26f57cc7cc70"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Welcome To Our Mega Store]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="40" width="211" height="20" uuid="4bb57e2e-98cc-43c4-8f8f-2c8888f79ec1"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[We meet your need any time, any where...]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement x="214" y="0" width="100" height="20" uuid="563590f8-d3b0-43fe-89b8-fcdc602604cf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Receipt]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="10" y="20" width="100" height="20" uuid="38f19678-9901-4358-9cb7-09a712e08527"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm.ss a">
+				<reportElement x="121" y="20" width="100" height="20" uuid="605a92a5-dd98-4a63-8a88-edad95dea44e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="49" width="173" height="20" uuid="6c3db8ff-5118-4cd7-82e0-c15142ac4dba"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<text><![CDATA[Customer Name:Various Clients]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="49" width="64" height="20" uuid="e1565e55-8c09-4fd1-8262-852a32b74805"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<text><![CDATA[Sales Rep.:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="314" y="49" width="82" height="20" uuid="32f67db1-1c81-438c-bdbd-43c4758f83ae"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sold_by}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="7" width="72" height="28" uuid="ed664c4d-54eb-4642-84e9-96b599f3a183"/>
+				<textElement>
+					<font fontName="Adobe Hebrew" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sell ID:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="82" y="7" width="74" height="28" uuid="69049ee1-a680-4180-9a9f-ade9139cd2e5"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sell_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="133" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="86" y="18" width="157" height="28" uuid="5117f612-9e73-4b61-880f-c4e98df485d0"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="74" width="130" height="28" uuid="8b4c9394-861a-404d-8d32-f3683a183678"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="8" y="74" width="130" height="28" uuid="551ad881-07ef-452b-ae7f-ea84c727425d"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sales_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="266" y="74" width="130" height="28" uuid="33f7e4bf-90f2-47ba-8abc-8f93d7ee226e"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total_price}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="46" width="130" height="28" uuid="cb0c2df1-7dbe-44a4-88bb-8ad522d32756"/>
+				<textElement>
+					<font fontName="Adobe Hebrew" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALES PRICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="46" width="130" height="28" uuid="79a8ff50-7a45-410e-acf3-d5f1a10fcb47"/>
+				<textElement>
+					<font fontName="Adobe Hebrew" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUANTITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="46" width="130" height="28" uuid="04aec7dd-146d-4e71-afb4-af3c64119cad"/>
+				<textElement>
+					<font fontName="Adobe Hebrew" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL PRICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="18" width="78" height="28" uuid="2397ee0a-d16a-4184-8bed-c863f0c54bfc"/>
+				<textElement>
+					<font fontName="Adobe Hebrew" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRODUCT:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="110" width="318" height="23" uuid="1a1d3c63-8c11-4a7b-aabc-08fcf8da7132"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Thank you for patronising. Pls come Again!!!]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="28" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="26" splitType="Stretch"/>
+	</summary>
+</jasperReport>

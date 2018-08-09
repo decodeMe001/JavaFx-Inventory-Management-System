@@ -1,0 +1,13 @@
+.text-field {
+    -fx-font-size: 12pt;
+}
+.table-view .column-header{
+    -fx-font-size: 11;
+	-fx-background-color: transparent;
+}
+
+.table-cell {
+    -fx-font-size: 11px;
+	-fx-background-color: null;
+    -fx-border-color: transparent -fx-table-cell-border-color transparent transparent;
+}

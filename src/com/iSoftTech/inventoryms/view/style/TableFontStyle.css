@@ -1,0 +1,25 @@
+.text-field {
+    -fx-font-size: 5pt;
+}
+.table-view .column-header{
+    -fx-font-size: 5pt;
+	-fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-font-weight:bold;
+    -fx-font-size:5pt;         
+    -fx-background-color: null;
+    -fx-border-color: transparent -fx-table-cell-border-color transparent transparent;
+    /* -fx-text-fill:orange; */
+
+}
+
+.table-row-cell:empty {
+	-fx-border-width: 0px;
+}
+
+.table-view {
+    -fx-control-inner-background-alt: -fx-control-inner-background ;
+	-fx-border-color: #fff;
+}

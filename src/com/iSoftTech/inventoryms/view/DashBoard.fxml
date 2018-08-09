@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.stage.Screen?>
+
+<AnchorPane fx:id="mainApp" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iSoftTech.inventoryms.view.DashBoardController">
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen"/>
+    </fx:define>
+    <children>
+      <BorderPane layoutY="25.0" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <ScrollPane hbarPolicy="ALWAYS" prefHeight="925.0" prefWidth="113.0" stylesheets="@style/DashboardStyle.css" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+               <content>
+                  <AnchorPane prefHeight="910.0" prefWidth="114.0">
+                     <children>
+                        <Button fx:id="btnHome" contentDisplay="TOP" mnemonicParsing="false" onAction="#onHomeClicked" prefHeight="70.0" prefWidth="104.0" text="Home" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <ImageView fx:id="homeImg" fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../resources/icon/home.png" />
+                                 </image></ImageView>
+                              
+                           </graphic>
+                           <font>
+                              <Font name="Georgia" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnStock" contentDisplay="TOP" layoutY="115.0" mnemonicParsing="false" onAction="#onStockClicked" prefHeight="70.0" prefWidth="104.0" text="Stock" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+                           <graphic>
+                              <ImageView fx:id="stockImg" fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../resources/icon/stock.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Georgia" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnSales" contentDisplay="TOP" layoutY="200.0" mnemonicParsing="false" onAction="#onSalesClicked" prefHeight="70.0" prefWidth="104.0" text="Sales" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="175.0">
+                           <graphic>
+                              <ImageView fx:id="salesImg" fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../resources/icon/sell2.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Georgia" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnEmployee" contentDisplay="TOP" layoutY="285.0" mnemonicParsing="false" onAction="#onEmployeeClicked" prefHeight="70.0" prefWidth="104.0" text="Employee" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="265.0">
+                           <graphic>
+                              <ImageView fx:id="employeeImg" fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../resources/icon/employe.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Georgia" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnAuth" contentDisplay="TOP" layoutY="370.0" mnemonicParsing="false" onAction="#onAuthenticate" prefHeight="70.0" prefWidth="104.0" text="Authenticate" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="355.0">
+                           <graphic>
+                              <ImageView fx:id="authImg" fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../resources/icon/settings.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Georgia" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnAbout" contentDisplay="TOP" layoutY="455.0" mnemonicParsing="false" onAction="#onAboutClicked" prefHeight="70.0" prefWidth="104.0" text="About" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="450.0">
+                           <graphic>
+                              <ImageView fx:id="aboutImg" fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../resources/icon/about.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Georgia" size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="dividerImg" fitHeight="5.0" fitWidth="114.0" layoutX="100.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                           <image>
+                              <Image url="@../../../../resources/icon/btnBreak.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="divider2Img" fitHeight="5.0" fitWidth="114.0" layoutX="100.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="162.0">
+                           <image>
+                              <Image url="@../../../../resources/icon/btnBreak.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="divider3Img" fitHeight="5.0" fitWidth="114.0" layoutX="100.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="250.0">
+                           <image>
+                              <Image url="@../../../../resources/icon/btnBreak.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="divider4Img" fitHeight="5.0" fitWidth="114.0" layoutX="100.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="342.0">
+                           <image>
+                              <Image url="@../../../../resources/icon/btnBreak.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="divider5Img" fitHeight="5.0" fitWidth="114.0" layoutX="100.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="435.0">
+                           <image>
+                              <Image url="@../../../../resources/icon/btnBreak.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ScrollPane>
+         </left>
+         <center>
+            <TabPane fx:id="contentBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab fx:id="homeScene" closable="false" text="Home" />
+              </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <AnchorPane fx:id="acHead" prefHeight="42.0" prefWidth="753.0" style="-fx-background-color: #282E34;" stylesheets="@style/StockStyle.css" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane layoutX="14.0" layoutY="-15.0" prefHeight="60.0" prefWidth="751.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <children>
+                              <AnchorPane prefHeight="48.0" prefWidth="160.0">
+                                 <children>
+                                    <JFXButton defaultButton="true" layoutX="43.0" layoutY="9.0" onAction="#btnLogOut" prefHeight="26.0" prefWidth="108.0" styleClass="optkey-btn3" stylesheets="@style/ButtonTheme.css" text="Sign Out" textAlignment="CENTER" textFill="#212121" wrapText="true" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="9.0">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="375.0">
+                           <children>
+                              <Label fx:id="lblUserId" text="Label" textFill="#eeeded" visible="false" />
+                              <Label text="DashBoard" textFill="#8eda87" wrapText="true">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label layoutY="7.0" text="StoreKeeper Inventory Management System(SIMS)" textFill="#8eda87" wrapText="true">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

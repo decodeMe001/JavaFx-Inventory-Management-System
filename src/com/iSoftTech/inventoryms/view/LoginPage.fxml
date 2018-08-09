@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@style/PopUp.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iSoftTech.inventoryms.view.LoginController">
+   <children>
+      <VBox layoutX="104.0" layoutY="111.0" prefHeight="352.0" prefWidth="637.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="59.0">
+         <children>
+            <GridPane prefHeight="144.0" prefWidth="632.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0" prefWidth="153.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="577.0" minWidth="10.0" prefWidth="432.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="handleUser" focusColor="#09b6bc" labelFloat="false" maxWidth="523.0" minWidth="302.0" prefHeight="40.0" prefWidth="523.0" promptText="Enter valid username" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets top="10.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="handlePass" focusColor="#09b6bc" labelFloat="false" maxWidth="523.0" minWidth="302.0" prefHeight="40.0" prefWidth="496.0" promptText="Enter valid password" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                 
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" text="Username:" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="60.0" top="20.0" />
+                     </GridPane.margin>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Password:" wrapText="true" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="60.0" top="20.0" />
+                     </GridPane.margin>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+               </children>
+            </GridPane>
+            <ComboBox fx:id="choiceBox" prefHeight="25.0" prefWidth="102.0">
+               <VBox.margin>
+                  <Insets left="60.0" />
+               </VBox.margin>
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" />
+               </effect>
+            </ComboBox>
+            <JFXButton fx:id="onGranted" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" defaultButton="true" onAction="#onLogin" prefHeight="52.0" prefWidth="170.0" ripplerFill="WHITE" style="-fx-background-color: #2195f3;" text="Login" textFill="WHITE" wrapText="true" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="50.0" left="230.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Georgia" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+            <Label fx:id="isConnected" alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="687.0" textAlignment="CENTER" textFill="RED" wrapText="true" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+      <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" layoutX="54.0" layoutY="60.0" prefHeight="40.0" prefWidth="124.0" text="SIMS Login" textFill="#600dee" wrapText="true">
+         <font>
+            <Font name="Georgia" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnClose" layoutX="770.0" layoutY="-1.0" mnemonicParsing="false" onAction="#btnCloseOnAction" prefHeight="30.0" prefWidth="33.0" stylesheets="@style/btnOnText.css" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

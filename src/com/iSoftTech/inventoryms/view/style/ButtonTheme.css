@@ -1,0 +1,57 @@
+/* 
+    Created on : Oct 15, 2016, 10:57:56 PM
+    Author     : Dada abiola
+*/
+/**Logbook button Style**/
+.screen-btn:hover {
+	-fx-background-color: black,white,black;
+	-fx-background-radius: 5px;
+	-fx-background-insets: 0, 1;
+	-fx-font-family: "Helvetica";
+	-fx-text-fill: white;
+	}
+        .activate-btn:hover{
+            -fx-background-color: red,white,red;
+             -fx-background-radius: 10px;
+            -fx-background-insets: 0, 2;
+            -fx-font-family: "Helvetica";
+            -fx-text-fill: white;
+        }
+        .anchor-pane{
+            -fx-background-color: #000;
+        }
+        .optkey-btn1:hover{
+        -fx-background-color: green,white,green;
+	-fx-background-radius: 5px;
+	-fx-background-insets: 0, 1;
+	-fx-font-family: "Helvetica";
+	-fx-text-fill: white;
+        }
+        .optkey-btn2:hover{
+        -fx-background-color: brown,white,brown;
+	-fx-background-radius: 5px;
+	-fx-background-insets: 0, 1;
+	-fx-font-family: "Helvetica";
+	-fx-text-fill: white;
+        }
+        .optkey-btn3:hover{
+        -fx-background-color: red,white,red;
+	-fx-background-radius: 5px;
+	-fx-background-insets: 0, 1;
+	-fx-font-family: "Helvetica";
+	-fx-text-fill: white;
+        }
+        
+    .jfx-text-field{
+    -fx-background-color: transparent ;
+    -fx-font-weight: BOLD;
+    -fx-prompt-text-fill: #fff;
+    -fx-alignment: top-left ;
+    -fx-max-width: 300.0;
+    -fx-pref-width:300.0;
+    -fx-text-fill : #fff;
+    -fx-focus-color: #00ff00;
+    -fx-unfocus-color: #fff;       
+}
+
+

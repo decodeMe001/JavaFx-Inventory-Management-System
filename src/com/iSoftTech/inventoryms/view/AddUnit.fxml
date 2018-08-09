@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="497.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iSoftTech.inventoryms.view.AddUnitController">
+   <children>
+      <GridPane layoutX="28.0" layoutY="47.0" prefHeight="373.0" prefWidth="453.0" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="45.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="548.0" minWidth="10.0" prefWidth="320.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Unit Value:" wrapText="true">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Pick Brand:" wrapText="true" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Created By:" wrapText="true" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Date Entered:" wrapText="true" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Time: Entered" wrapText="true" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="unitValue" focusColor="RED" labelFloat="true" promptText="Enter Value Here" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="addedBy" focusColor="RED" labelFloat="true" promptText="Enter Created" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXDatePicker fx:id="date" defaultColor="#009485" editable="false" promptText="Pick a Date" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JFXDatePicker fx:id="time" editable="false" promptText="Pick Time" showTime="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cbBrand" onAction="#cmBoxBrandAction" onMouseClicked="#cbAddBrand" prefHeight="42.0" prefWidth="374.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="saveButton" defaultButton="true" layoutX="281.0" layoutY="353.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="35.0" prefWidth="110.0" styleClass="optkey-btn1" stylesheets="@style/ButtonTheme.css" text="Save" wrapText="true" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="150.0">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="updateButton" defaultButton="true" layoutX="460.0" layoutY="645.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="35.0" prefWidth="110.0" styleClass="optkey-btn3" stylesheets="@style/ButtonTheme.css" text="Update" wrapText="true" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnClose" layoutY="4.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="25.0" prefWidth="22.0" styleClass="btnClose" stylesheets="@style/btnOnText.css" wrapText="true" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+      <Label layoutX="19.0" layoutY="6.0" text="Add Unit" wrapText="true">
+         <font>
+            <Font name="Georgia Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="21.0" text="ID:" textFill="BLUE">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="unitIDLabel" layoutX="422.0" layoutY="20.0" prefHeight="16.0" prefWidth="65.0" text="Label" wrapText="true">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+   <stylesheets>
+      <URL value="@style/PopUp.css" />
+      <URL value="@style/StockStyle.css" />
+   </stylesheets>
+</AnchorPane>
